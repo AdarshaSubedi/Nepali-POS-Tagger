@@ -1,0 +1,21 @@
+{% include 'master/base.html'%}
+{% load staticfiles %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{%block content%}
+    <section class="contact-container" style="margin-top:-45%; ">
+        <div style="margin-top:8%;">
+            <h1>INSERT NEPALI TEXT</h1>
+                <form class="form" method="post" action="{% url 'paragraph'%}">
+                 <textarea name="paragraph" id="paragraph" cols="50" rows="20" ></textarea>
+                {% csrf_token %}<br/>
+
+                <input type="submit" value="POS Tag">
+            </form>
+
+        </div>
+    </section>
+
+{%endblock%}
